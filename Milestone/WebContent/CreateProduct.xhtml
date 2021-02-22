@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+	<ui:composition template="/layouts/commonLayouts.xhtml">
+		<ui:define name="content">
+			<h:head>
+				<title>ANACompute | Product Creation</title>
+				<link rel="stylesheet" href="css/style.css" type="text/css" />
+			</h:head>
+			
+			<!-- Product information entry -->
+			<div>
+				<h:form class="noWrap">
+					<p>Create Product</p>
+					
+					<!-- Product ID -->
+					<p>
+						Product ID:
+						<h:inputText value="#{product.productID}" />
+					</p>
+					
+					<!-- Product name -->
+					<p>
+						Product Name:
+						<h:inputText value="#{product.productName}" />
+					</p>
+					
+					<!-- Product description -->
+					<p>
+						Product Description:
+						<h:inputText value="#{product.productDiscription}" />
+					</p>
+					
+					<!-- Amount of product in stock -->
+					<p>
+						Stock:
+						<h:inputText value="#{product.productAmount}" />
+					</p>
+					
+					<!-- Product cost -->
+					<p>
+						Product Cost:
+						<h:inputText value="#{product.productCost}" />
+					</p>
+					
+					<!-- Product price -->
+					<p>
+						Product Price:
+						<h:inputText value="#{product.productPrice}" />
+					</p>
+				
+					<!-- Cancel Button & Save new product button -->
+					<div>
+						<!-- Save button -->
+						<h:commandButton action="#{storeManager.CreateNewProduct()}" value="Save" />
+						<!-- Cancel button -->
+						<h:commandButton action="#{navigationController.onSubmit('Products.xhtml')}" value="Cancel" />
+					</div>
+				</h:form>
+				
+				<h:form>
+					<!-- Upload Image -->
+					<p>
+						Product ImageURL:
+						<h:inputText value="#{product.imageUrl}" />
+						<h:graphicImage value="" width="70px" height="70px" />
+					</p>
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</html>

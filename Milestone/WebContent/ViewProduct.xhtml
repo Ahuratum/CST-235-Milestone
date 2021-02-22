@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<ui:composition template="/layouts/commonLayouts.xhtml">
+	<ui:define name="content">
+		<h:head>
+			<link rel="stylesheet" href="css/style.css" type="text/css" />
+		</h:head>
+		<h:head>
+	<title>
+		ANACompute | Product Form
+	</title>
+</h:head>
+		<div>
+			<h:form class="noWrap">
+				<h2>#{product.productName}</h2>
+				<p>
+					<h:graphicImage value="#{product.imageUrl}" width="140px"
+						height="140px" /><br/>
+					#{product.productDiscription}
+				</p>
+				<br/>
+				<p>
+					Product ID: #{product.productID}
+				</p>
+				<p>
+					In Stock: #{product.productAmount}
+
+				</p>
+				<p>
+					Price: $#{product.productCost}
+
+				</p>
+				
+				<h:button action="#{navigationController.onSubmit('Products.xhtml')}" value="Back" />
+				<h:commandButton action="#{storeManager.purchase(o)}" value="Buy" styleClass="button" />
+			</h:form>
+		</div>
+
+
+	</ui:define>
+</ui:composition>
+</html>

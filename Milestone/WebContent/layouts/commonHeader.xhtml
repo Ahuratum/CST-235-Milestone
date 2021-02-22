@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition>
+			<h:outputStylesheet library="css" name="style.css" />
+			<body>
+				<h:commandButton action="#{navigationController.onSubmit('Home.xhtml')}" image="ANACompute.png" class="logoButton" />
+				<div class="navigation">
+					<nav>
+						<ul>
+							<li><a href="#{navigationController.onSubmit('Home.xhtml')}">Home</a></li>
+							<li><a href="Login.xhtml">Login</a></li>
+							<li><a href="Registration.xhtml">Register</a></li>
+							<li><a href="Account.xhtml"> Account</a></li>
+							<li><a href="Products.xhtml">Products</a></li>
+							<li><a href="Team.xhtml">Team</a></li>
+						</ul>
+					</nav>
+					<div class="loginHeader">
+						<font color="black">#{navigationController.loggedName}</font>
+					</div>
+				</div>
+			</body>
+	</ui:composition>
+</html>

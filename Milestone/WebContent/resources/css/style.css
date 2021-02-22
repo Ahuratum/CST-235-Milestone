@@ -1,0 +1,351 @@
+@charset "ISO-8859-1";
+
+/* Start fonts */
+/* ----- */
+@font-face{
+	 font-family: aquire;
+	 src: url("Aquire-BW0ox.otf") format("opentype");
+}
+/* End fonts */
+/* --------- */
+
+/* Start header layout navigation bar */
+/* ---------------------------------- */
+.navigation{
+	font-family: aquire;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	margin:20;
+	padding: 10;
+	box-sizing: border-box;
+	white-space: nowrap;
+}
+.navigation nav{
+	flex: 1;
+	text-align: center;
+	white-space: nowrap;
+}
+.navigation nav ul{
+	display: inline-block;
+	list-style-type: none;
+}
+.navigation nav ul li{
+	display: inline-block;
+	margin-right: 10px;
+	padding: 20px;
+}
+.navigation nav ul li a{
+	text-decoration: none;
+	font-size: 30px;
+}
+.navigation nav ul li a:hover {
+  background-color: black;
+  color: white;
+}
+.logoButton {
+	height: 75px;
+	width: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: none;
+	float: middle;
+	white-space: nowrap;
+	padding: 6px 8px;
+	margin: 15px;
+}
+.loginHeader {
+	white-space: nowrap;
+	position: absolute;
+	top: 01%;
+  	right: 20%;
+  	font-family: aquire;
+}
+/* End header layout navigation bar */
+/* -------------------------------- */
+
+/* Start footer layout navigation bar */
+/* ---------------------------------- */
+.foot{
+	position: relative;
+ 	min-height: 100vh;
+}
+
+.footOrder {
+	list-style-type: none;
+	position: absolute;
+	width: 100%;
+	color: black;
+	background-color: grey;
+}
+.footList {
+	display: inline;
+	float: center;
+	padding: 4px;
+}
+.footLink {
+	font-family: aquire;
+}
+.rights {
+	font-family: aquire;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background-color: grey;
+	color: white;
+	text-align: center;
+	padding: 4px;
+}
+/* End footer layout navigation bar */
+/* -------------------------------- */
+
+/* Start home page side menu */
+/* ------------------------- */
+.homeRow{
+	border:1px solid black;
+	height: 50%;
+	position: fixed;
+	padding: 15px;
+}
+.homeRow:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.homeRow ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.homeRow ul li{
+	padding: 8px;
+	margin-bottom: 7px;
+	background-color :#33b5e5;
+	color: #ffffff;
+}
+.homeRow ul li a{
+	text-decoration: none;
+	font-size: 10px;
+}
+.homeRow ul li a:hover{
+	background-color: black;
+	color: white;
+}
+/* End home page side menu */
+/* ------------------------- */
+
+/* Start home page slider */
+/* ---------------------- */
+.slideFrame {
+	overlfow: hidden;
+	height: 300px;
+	width: 100%;
+	position: relative;
+}
+@-webkit-keyframes slide_animation{
+	0% {right:0px;}
+	10% {right:0px;}
+	20% {right:0px;}
+	30% {right:300px;}
+	40% {right:300px;}
+	50% {right:600px;}
+	60% {right:600px;}
+	70% {right:300px;}
+	80% {right:300px;}
+	90% {right:0px;}
+	100% {right:0px;}
+}
+.slideImage {
+	display: inline-block;
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	-webkit-animation-name: slide_animation;
+	-webkit-animation-duration: 10s;
+  	-webkit-animation-iteration-count: infinite;
+  	-webkit-animation-play-state: running;
+}
+.slideImageContainer{
+	height: 300px;
+	width: 1200px;
+	position: relative;
+	float: left;
+}
+h5.slideText {
+	max-width: 50%;
+	position: absolute;
+	left: 0;
+	transform: translateY(-50%);
+	font-family: aquire;
+	font-size: 5rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* End home page slider */
+/* -------------------- */
+
+.order-table{   
+    border-collapse:collapse;
+}
+
+.order-table-header{
+    text-align:center;
+    background:none repeat scroll 0 0 #E5E5E5;
+    border-bottom:1px solid #BBBBBB;
+    padding:16px;
+}
+
+.order-table-odd-row{
+    text-align:center;
+    background:none repeat scroll 0 0 #FFFFFFF;
+    border-top:1px solid #BBBBBB;
+}
+
+.order-table-even-row{
+    text-align:center;
+    background:none repeat scroll 0 0 #F9F9F9;
+    border-top:1px solid #BBBBBB;
+}
+
+.col1 {
+  float: right;
+  width: 25%;
+  white-space: nowrap;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+body {
+	margin: 0;
+	font-family: Helvetica;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.searchHeader {
+	white-space: nowrap;
+	top: 18%;
+  	text-align: center;
+}
+.noWrap {
+	white-space: nowrap;
+	position: absolute;
+	top: 170px;
+  	left: 10%;
+}
+
+.bottom {
+	white-space: nowrap;
+	top: 100%;
+  	left: 00%;
+}
+ul#list-nav {
+	list-style: none;
+	margin: 20px;
+	padding: 0;
+	width: 525px
+}
+
+ul#list-nav li {
+	display: inline
+}
+
+ul#list-nav li a {
+	white-space: nowrap;
+	text-decoration: none;
+	padding: 5px 0;
+	width: 100px;
+	background: #485e49;
+	color: #eee;
+	float: left;
+	text-align: center;
+	border-left: 1px solid #fff;
+}
+
+ul#list-nav li a:hover {
+	background: lightgrey;
+	color: white;
+}
+
+.topnav {
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: Black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 50px;
+}
+
+.topnav a:hover {
+	text-shadow: 4px 4px 5px DodgerBlue;
+}
+
+.topnav a.active {
+	
+}
+
+form.searchSubmit {
+	float: right;
+	padding: 14px;
+}
+
+table {
+	overflow: auto;
+	display: block;
+	margin: auto;
+	width: 80%;
+	border-radius: 5px;
+	padding: 10px;
+	border-collapse: separate;
+	top: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

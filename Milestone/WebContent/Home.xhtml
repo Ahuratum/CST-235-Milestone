@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+
+	<ui:composition template="/layouts/commonLayouts.xhtml">
+		<h:head>
+			<title>ANACompute | Home</title>
+		</h:head>
+		<ui:define name="content">
+			<h:form class="searchHeader" id="seach">
+				<h:inputText binding="#{input1}" />
+				<h:commandButton value="Search" action="#{storeManager.executeSearch(input1.value)}" />
+			</h:form><br />
+			<div class="slideFrame">
+				<div class="slideImage">
+					<div class="slideImageContainer">
+						<h:graphicImage value="/resources/slideshow/projectOne.jpg"></h:graphicImage>
+						<div class="slideText">
+							<h5>What will you build next?</h5>
+						</div>
+					</div>	
+					<div class="slideImageContainer">
+						<h:graphicImage value="/resources/slideshow/projectTwo.jpg"></h:graphicImage>
+						<div class="slideText">
+							<h5>A world of learning awaits!</h5>
+						</div>
+					</div>
+					<div class="slideImageContainer">
+						<h:graphicImage value="/resources/slideshow/projectThree.jpg"></h:graphicImage>
+						<div class="slideText">
+							<h5>Join the community today!</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+
+
+
+
+
+
+</html>
